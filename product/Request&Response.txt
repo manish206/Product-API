@@ -1,0 +1,197 @@
+url:- localhost:8080/addProducts
+Request :-
+
+[
+{
+	"productId": "1003",
+	"productName":"Bosch Star Washing Machie",
+	"productType":"Washing Machine",
+	"productCategory":"Electronics",
+	"productPrice":40900.00,
+	"sellerId":"200"
+},
+{
+	"productId": "1004",
+	"productName":"Samsung Top Load",
+	"productType":"Washing Machine",
+	"productCategory":"Electronics",
+	"productPrice":9000.00,
+	"sellerId":"200"
+},
+{
+	"productId": "1001",
+	"productName":"Lenovo T14 Gen2",
+	"productType":"Laptop",
+	"productCategory":"Electronics",
+	"productPrice":60000.00,
+	"sellerId":"100"
+},
+{
+	"productId": "1002",
+	"productName":"HP T14 Gen2",
+	"productType":"Laptop",
+	"productCategory":"Electronics",
+	"productPrice":70000.00,
+	"sellerId":"100"
+}
+]
+
+Response:-
+
+[
+    {
+        "productId": "1003",
+        "productName": "Bosch Star Washing Machie",
+        "productType": "Washing Machine",
+        "productCategory": "Electronics",
+        "productPrice": 40900,
+        "sellerId": "200"
+    },
+    {
+        "productId": "1004",
+        "productName": "Samsung Top Load",
+        "productType": "Washing Machine",
+        "productCategory": "Electronics",
+        "productPrice": 9000,
+        "sellerId": "200"
+    },
+    {
+        "productId": "1001",
+        "productName": "Lenovo T14 Gen2",
+        "productType": "Laptop",
+        "productCategory": "Electronics",
+        "productPrice": 60000,
+        "sellerId": "100"
+    },
+    {
+        "productId": "1002",
+        "productName": "HP T14 Gen2",
+        "productType": "Laptop",
+        "productCategory": "Electronics",
+        "productPrice": 70000,
+        "sellerId": "100"
+    }
+]
+
+
+url:-localhost:8080/deleteProduct?sellerId=1003&productId=200
+
+Request:- 
+Resonse:-Product deleted succesfully
+
+url:- localhost:8080/viewProducts/100
+Request:-
+Response:-
+
+[
+    {
+        "productId": "1001",
+        "productName": "Lenovo T14 Gen2",
+        "productType": "Laptop",
+        "productCategory": "Electronics",
+        "productPrice": 60000,
+        "sellerId": "100"
+    },
+    {
+        "productId": "1002",
+        "productName": "HP T14 Gen2",
+        "productType": "Laptop",
+        "productCategory": "Electronics",
+        "productPrice": 70000,
+        "sellerId": "100"
+    }
+]
+
+url:- localhost:8080/viewProducts/category/Electronics
+Request:- 
+Response:-
+[
+    {
+        "productId": "1004",
+        "productName": "Samsung Top Load",
+        "productType": "Washing Machine",
+        "productCategory": "Electronics",
+        "productPrice": 9000,
+        "sellerId": "200"
+    },
+    {
+        "productId": "1001",
+        "productName": "Lenovo T14 Gen2",
+        "productType": "Laptop",
+        "productCategory": "Electronics",
+        "productPrice": 60000,
+        "sellerId": "100"
+    },
+    {
+        "productId": "1002",
+        "productName": "HP T14 Gen2",
+        "productType": "Laptop",
+        "productCategory": "Electronics",
+        "productPrice": 70000,
+        "sellerId": "100"
+    }
+]
+
+url:- localhost:8080/viewProducts/name/Samsung Top Load
+Request:-
+Response:-
+[
+    {
+        "productId": "1004",
+        "productName": "Samsung Top Load",
+        "productType": "Washing Machine",
+        "productCategory": "Electronics",
+        "productPrice": 9000,
+        "sellerId": "200"
+    }
+]
+url:-localhost:8080/viewProducts/pricerange?min=2000&max=60000
+Request:-
+Response:-
+[
+    {
+        "productId": "1003",
+        "productName": "Bosch Star Washing Machie",
+        "productType": "Washing Machine",
+        "productCategory": "Electronics",
+        "productPrice": 40900,
+        "sellerId": "200"
+    },
+    {
+        "productId": "1004",
+        "productName": "Samsung Top Load",
+        "productType": "Washing Machine",
+        "productCategory": "Electronics",
+        "productPrice": 9000,
+        "sellerId": "200"
+    },
+    {
+        "productId": "1001",
+        "productName": "Lenovo T14 Gen2",
+        "productType": "Laptop",
+        "productCategory": "Electronics",
+        "productPrice": 60000,
+        "sellerId": "100"
+    }
+]
+
+url:-localhost:8080/viewProducts/type/Laptop
+Response:-
+[
+    {
+        "productId": "1001",
+        "productName": "Lenovo T14 Gen2",
+        "productType": "Laptop",
+        "productCategory": "Electronics",
+        "productPrice": 60000,
+        "sellerId": "100"
+    },
+    {
+        "productId": "1002",
+        "productName": "HP T14 Gen2",
+        "productType": "Laptop",
+        "productCategory": "Electronics",
+        "productPrice": 70000,
+        "sellerId": "100"
+    }
+]
